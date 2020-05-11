@@ -8,20 +8,26 @@
   "repository": "https://github.com/PhilippSchmidCoC/preact-typescript-web-component.git",
   "license": "MIT",
   "scripts": {
-    "start": "rm -rf .cache && parcel src/index.html --target browser --open",
+    "start": "rm -rf .cache && rm -rf dist && parcel src/index.html --target browser --open",
     "build": "rm -rf .cache && rm -rf dist && parcel build src/index.html --target browser --public-url './'",
-    "serve": " http-server dist "
+    "serve": "serve dist -p 5000"
   },
   "devDependencies": {
     "@fullhuman/postcss-purgecss": "^2.2.0",
+    "autoprefixer": "^9.7.6",
     "http-server": "^0.12.3",
     "parcel-bundler": "^1.12.4",
+    "postcss-custom-properties": "^9.1.1",
+    "postcss-easy-import": "^3.0.0",
     "postcss-modules": "^2.0.0",
+    "postcss-nested": "^4.2.1",
+    "preact-custom-element": "^3.0.0",
+    "serve": "^11.3.0",
     "tailwindcss": "^1.4.6",
-    "typescript": "^3.8.3"
+    "typescript": "^3.8.3",
+    "cssnano": "^4.1.10"
   },
   "dependencies": {
-    "cssnano": "^4.1.10",
     "preact": "^10.4.1"
   }
 }
