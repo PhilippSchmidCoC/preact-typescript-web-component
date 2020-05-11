@@ -9,12 +9,15 @@ const Counter = ({counter}: {counter: number}) => {
     <Fragment>
       <h2>This is a Counter</h2>
       <button
+        data-cy="counter-button"
         class="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded-full"
         onClick={() => setState(state + 1)}
       >
         count
       </button>
-      {state}
+
+      <div data-cy="counter-value"> {state}</div>
+
       <button
         class="bg-transparent hover:bg-blue-500 text-blue-700 font-semibold hover:text-white py-2 px-4 border border-blue-500 hover:border-transparent rounded"
         onClick={() => setToggle(!toggle)}

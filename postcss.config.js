@@ -5,8 +5,7 @@ const customProperties = require('postcss-custom-properties');
 const autoprefixer = require('autoprefixer');
 const cssnano = require('cssnano');
 
-// const IS_DEVELOPMENT = process.env.NODE_ENV === 'development';
-const IS_DEVELOPMENT = true;
+const IS_DEVELOPMENT = process.env.NODE_ENV === 'development';
 
 const plugins = [];
 // plugins.push(tailwindcss);
