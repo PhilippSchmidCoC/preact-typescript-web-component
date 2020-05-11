@@ -17,26 +17,26 @@ plugins.push(customProperties);
 plugins.push(autoprefixer);
 plugins.push(cssnano);
 
-if (!IS_DEVELOPMENT) {
-  const purgecss = require('@fullhuman/postcss-purgecss');
+// if (!IS_DEVELOPMENT) {
+//   const purgecss = require('@fullhuman/postcss-purgecss');
 
-  class TailwindExtractor {
-    static extract(content) {
-      return content.match(/[A-z0-9-:\/]+/g) || [];
-    }
-  }
+//   class TailwindExtractor {
+//     static extract(content) {
+//       return content.match(/[A-z0-9-:\/]+/g) || [];
+//     }
+//   }
 
-  plugins.push(
-    purgecss({
-      content: ['src/**/*.{html,js,jsx,ts,tsx}'],
-      extractors: [
-        {
-          extractor: TailwindExtractor,
-          extensions: ['html'],
-        },
-      ],
-    }),
-  );
-}
+//   // plugins.push(
+//   //   purgecss({
+//   //     content: ['src/**/**/*.{html,js,jsx,ts,tsx}'],
+//   //     extractors: [
+//   //       {
+//   //         extractor: TailwindExtractor,
+//   //         extensions: ['html'],
+//   //       },
+//   //     ],
+//   //   }),
+//   // );
+// }
 
 module.exports = {plugins};

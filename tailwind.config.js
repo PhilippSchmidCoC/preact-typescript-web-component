@@ -1,7 +1,7 @@
 module.exports = {
   purge: {
     mode: 'all',
-    content: ['src/**/*.{html,js,jsx,ts,tsx}'],
+    content: ['src/**/**/*.{html,js,jsx,ts,tsx}'],
   },
   prefix: '',
   important: false,
